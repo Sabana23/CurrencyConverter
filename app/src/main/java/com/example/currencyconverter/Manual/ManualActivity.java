@@ -1,4 +1,4 @@
-package com.example.currencyconverter;
+package com.example.currencyconverter.Manual;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.currencyconverter.R;
 import com.example.currencyconverter.Retrofit.RetrofitBuilder;
 import com.example.currencyconverter.Retrofit.RetrofitInterface;
 import com.google.gson.JsonObject;
@@ -40,9 +41,13 @@ public class ManualActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
 
         //Adding Functionality
-        List<String> states = Arrays.asList("USD","INR","EUR","NZD","AFN","ARS","AOA");
-        ArrayAdapter<String> adapter = new ArrayAdapter(getApplicationContext(),R.layout.my_selected_item,states);
-        adapter.setDropDownViewResource(R.layout.my_dropdown_item);
+        String[] dropdownList = {"USD","AED","AFN","ALL","AMD","ANG","AOA",
+                "ARS","AUD","AWG", "AZN","BAM","BBD","BDT","BGN","BHD","BIF","BMD",
+                "BND","BOB","BRL","BSD","BTN","BWP","BYN","BZD","CAD",
+                "CDF","CHF","CLP","CNY","COP","CRC","CUC","CUP","CVE",
+                "CZK","DJF","DKK","DOP","DZD","EGP","ERN","ETB","EUR",
+                "FJD","FKP","FOK","GBP","GEL","GGP","GHS","GIP","GMD","GNF"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,dropdownList);
         convertToDropdown.setAdapter(adapter);
         convertFromDropdown.setAdapter(adapter);
 

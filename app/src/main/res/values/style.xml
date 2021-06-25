@@ -8,6 +8,9 @@
 <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/background_splashscreen</item>
 </style>
-
-
+<style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+    <item name="android:textSize">30dp</item>
+    <item name="android:textColor">@color/title_color</item>
+    <item name="android:fontFamily">monospace</item>
+</style>
 </resources>

@@ -158,7 +158,7 @@ public class CurrencyActivity extends AppCompatActivity {
 
     public String getConversionRate(String convertFrom, String convertTo,Double amountToConvert) {
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://v6.exchangerate-api.com/v6/"+convertFrom+"_"+convertTo+"5a916dd688a2e019cbd53ecb/latest/USD";
+        String url = "https://v6.exchangerate-api.com/v6/"+convertFrom+"_"+convertTo+"5a916dd688a2e019cbd53ecb";
         StringRequest  stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
             @Override

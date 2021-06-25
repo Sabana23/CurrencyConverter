@@ -21,9 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CurrencyActivity"
+        <activity android:name=".Manual.ManualActivity"
             android:theme="@style/Theme.AppCompat">
         </activity>
     </application>
+
 
 </manifest>

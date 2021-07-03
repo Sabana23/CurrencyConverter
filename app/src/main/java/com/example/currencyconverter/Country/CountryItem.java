@@ -1,4 +1,4 @@
-package com.example.currencyconverter;
+package com.example.currencyconverter.Country;
 
 public class CountryItem {
         private String mCountryName;

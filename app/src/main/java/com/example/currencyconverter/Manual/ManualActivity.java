@@ -1,14 +1,14 @@
 package com.example.currencyconverter.Manual;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.currencyconverter.R;
@@ -31,7 +31,7 @@ public class ManualActivity extends AppCompatActivity {
     private Object List;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual);
         currencyToBeConverted = findViewById(R.id.currency_to_be_converted);
@@ -46,7 +46,19 @@ public class ManualActivity extends AppCompatActivity {
                 "BND","BOB","BRL","BSD","BTN","BWP","BYN","BZD","CAD",
                 "CDF","CHF","CLP","CNY","COP","CRC","CUC","CUP","CVE",
                 "CZK","DJF","DKK","DOP","DZD","EGP","ERN","ETB","EUR",
-                "FJD","FKP","FOK","GBP","GEL","GGP","GHS","GIP","GMD","GNF"};
+                "FJD","FKP","FOK","GBP","GEL","GGP","GHS","GIP","GMD","GNF",
+                "GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS",
+                "IMP","INR","IQD","IRR","ISK","JMD","JOD","JPY","KES",
+                "KGS","KHR","KID","KMF","KRW","KWD","KYD","KZT","LAK",
+                "LBP","LKR","LRD","LSL","LYD","MAD","MDL","MGA","MKD",
+                "MMK","MNT","MOP","MRU","MUR","MVR","MWK","MXN","MYR",
+                "MZN","NAD","NGN","NIO","NOK","NPR","NZD","OMR","PAB",
+                "PEN","PGK","PHP","PKR","PLN","PYG","QAR","RON","RSD",
+                "RUB","RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP",
+                "SLL","SOS","SRD","SSP","STN","SYP","SZL","THB","TJS",
+                "TMT","TND","TOP","TRY","TTD","TVD","TWD","TZS","UAH",
+                "UGX","UYU","UZS","VES","VND","VUV","WST","XAF",
+                "XCD","XDR","XOF","XPF","YER","ZAR","ZMW"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,dropdownList);
         convertToDropdown.setAdapter(adapter);
         convertFromDropdown.setAdapter(adapter);

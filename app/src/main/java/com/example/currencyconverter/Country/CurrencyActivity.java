@@ -1,11 +1,8 @@
-package com.example.currencyconverter;
+package com.example.currencyconverter.Country;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
-import android.app.DownloadManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -23,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.currencyconverter.R;
 
 import org.json.JSONObject;
 
@@ -44,7 +42,19 @@ public class CurrencyActivity extends AppCompatActivity {
             "BND","BOB","BRL","BSD","BTN","BWP","BYN","BZD","CAD",
             "CDF","CHF","CLP","CNY","COP","CRC","CUC","CUP","CVE",
             "CZK","DJF","DKK","DOP","DZD","EGP","ERN","ETB","EUR",
-            "FJD","FKP","FOK","GBP","GEL","GGP","GHS","GIP","GMD","GNF"}; //1000
+            "FJD","FKP","FOK","GBP","GEL","GGP","GHS","GIP","GMD","GNF",
+            "GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS",
+            "IMP","INR","IQD","IRR","ISK","JMD","JOD","JPY","KES",
+            "KGS","KHR","KID","KMF","KRW","KWD","KYD","KZT","LAK",
+            "LBP","LKR","LRD","LSL","LYD","MAD","MDL","MGA","MKD",
+            "MMK","MNT","MOP","MRU","MUR","MVR","MWK","MXN","MYR",
+            "MZN","NAD","NGN","NIO","NOK","NPR","NZD","OMR","PAB",
+            "PEN","PGK","PHP","PKR","PLN","PYG","QAR","RON","RSD",
+            "RUB","RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP",
+            "SLL","SOS","SRD","SSP","STN","SYP","SZL","THB","TJS",
+            "TMT","TND","TOP","TRY","TTD","TVD","TWD","TZS","UAH",
+            "UGX","UYU","UZS","VES","VND","VUV","WST","XAF",
+            "XCD","XDR","XOF","XPF","YER","ZAR","ZMW"}; //1000
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
